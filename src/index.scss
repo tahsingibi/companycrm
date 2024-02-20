@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    * {
+        font-family: 'Inter', sans-serif !important;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-background box-border min-h-svh;
+    }
+
+}
+
+@layer components {
+    .MainLayout {
+        @apply bg-transparent flex flex-1 min-h-screen;
+
+        &Wrapper,
+        .Content,
+        .Header,
+        .Sidebar {
+            @apply bg-transparent
+        }
+
+        &Wrapper {
+            @apply h-fit
+        }
+
+        .Content {
+            @apply max-w-[880px] p-4 w-full mx-auto
+        }
+
+        .Header {
+            @apply px-8 py-5 flex items-end
+        }
+
+        .Sidebar {
+            @apply max-w-64 w-full flex flex-1 h-screen sticky top-0 #{!important};
+
+            &-trigger {
+                @apply opacity-0 scale-0 hidden #{!important};
+            }
+
+            &-children {
+                @apply w-full flex flex-col justify-between;
+            }
+
+            &-collapsed {
+                @apply max-w-20 #{!important};
+            }
+
+            .Nav {
+                @apply bg-transparent border-none m-0 px-3 py-4 space-y-2 #{!important};
+
+                &-inline-collapsed>.Nav-item span {
+                    @apply hidden
+                }
+
+                &-item {
+                    @apply m-0 w-full leading-4 px-4 py-3 max-h-11 h-full flex items-center text-gray-12 #{!important};
+
+                    &:not(&-selected) {
+                        @apply hover:bg-zinc-200/30
+                    }
+
+                    &-selected {
+                        @apply font-semibold text-primary #{!important};
+
+                        svg {
+                            @apply stroke-2;
+                        }
+                    }
+
+                    .Nav-title-content {
+                        @apply text-[14px] leading-8 #{!important};
+                    }
+                }
+            }
+        }
+
+        .MainLayoutCard {
+            @apply shadow-none border-none;
+
+            &-body {
+                @apply p-4;
+            }
+
+            &Badge-status-text {
+                @apply text-['#666666'] #{!important}
+            }
+        }
+
+        .MainLayoutCardPrimary {
+            &-body {
+                @apply p-4 flex h-full;
+            }
+        }
+    }
+
+    #CompaniesChart {
+        @apply min-h-[105px] max-h-[105px] h-[105px] #{!important};
+    }
+
+    .YearlyTable {
+        .ant-table {
+            @apply bg-transparent #{!important};
+        }
+
+        .ant-spin-nested-loading>.ant-spin-container>.ant-table>.ant-table-container>.ant-table-content>table>tbody {
+            tr {
+                @apply *:bg-transparent #{!important};
+
+                &:last-child {
+                    td {
+                        @apply border-none pb-0 #{!important}
+                    }
+                }
+            }
+
+            td {
+                @apply px-0 py-3 #{!important};
+            }
+        }
+    }
+}
