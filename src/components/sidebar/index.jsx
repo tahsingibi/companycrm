@@ -19,6 +19,7 @@ export default function Sidebar() {
       collapsible
       collapsed={sidebarCollapse}
       trigger={null}
+      
     >
       <Flex vertical>
         <Logo className="px-8 py-5" type={logoType} />

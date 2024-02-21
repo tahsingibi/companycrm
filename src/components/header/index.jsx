@@ -13,9 +13,21 @@ export default function Header() {
 export function UserMenu() {
   return (
     <Flex gap={16}>
-      <Button type="text" shape="circle" icon={<GlobeIcon className="w-6 h-6"/>} />
-      <Button type="text" shape="circle" icon={<BellIcon className="w-6 h-6"/>} />
-      <Button type="text" shape="circle" icon={<SquaresIcon className="w-6 h-6"/>} />
+      <Button
+        type="text"
+        shape="circle"
+        icon={<GlobeIcon className="w-6 h-6" />}
+      />
+      <Button
+        type="text"
+        shape="circle"
+        icon={<BellIcon className="w-6 h-6" />}
+      />
+      <Button
+        type="text"
+        shape="circle"
+        icon={<SquaresIcon className="w-6 h-6" />}
+      />
       <Avatar className="cursor-pointer hover:opacity-75 bg-red-500">T</Avatar>
     </Flex>
   );

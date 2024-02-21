@@ -1,17 +1,15 @@
-import {
-  Avatar,
-  Button,
-  Flex
-} from 'antd';
+import { Avatar, Button, Flex } from 'antd';
 import React from 'react';
 import Heading from '../../../components/heading';
-import {
-  ArrowLongRightIcon
-} from '../../../components/icons';
+import { ArrowLongRightIcon } from '../../../components/icons';
 
 export default function WelcomeUser() {
   return (
-    <Flex align="center" justify="space-between">
+    <Flex
+      align="center"
+      justify="space-between"
+      className="flex-col justify-start items-start gap-4 md:flex-row md:gap-0 md:justify-between md:items-center"
+    >
       <Flex vertical gap={12}>
         <Flex align="center" gap={12}>
           <Avatar size={40} />
