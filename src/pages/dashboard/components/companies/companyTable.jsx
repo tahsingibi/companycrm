@@ -12,6 +12,7 @@ export default function CompanyTable({ title }) {
   const { data, loading } = useSelector(
     (state) => state.yearlyIncome.yearlyIncome
   );
+
   const columns = [
     {
       title: 'Sector',
