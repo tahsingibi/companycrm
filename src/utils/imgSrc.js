@@ -1,3 +1,7 @@
 export default function imgSrc(path) {
-  return `${window.location.origin}/${path}`;
+  const url = path.startsWith('http')
+    ? path
+    : `${window.location.origin}/${path}`;
+
+  return url;
 }

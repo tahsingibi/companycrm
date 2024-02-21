@@ -1,27 +1,52 @@
 import { Button, Dropdown, Flex, Input, Space } from 'antd';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Heading from '../../../../components/heading';
 import {
   ChevronDownMiniIcon,
   MagnifyingGlassMiniIcon,
 } from '../../../../components/icons';
+import { actions as YearlyIncomeActions } from '../../../../store/actions/yearlyIncome';
 
-export default function Header({ title }) {
+export default function Header({ title, data = [] }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { searchInYearlyIncome } = YearlyIncomeActions;
+
+  function handleChange(e) {
+    e.preventDefault();
+    dispatch(searchInYearlyIncome(e.target.value));
+  }
+
+  function itemsChildren(key) {
+    let children = [];
+    data.forEach((item) => {
+      if (
+        !JSON.stringify(children).toLowerCase().includes(item[key].toLowerCase())
+      ) {
+        children = [...children, { key: item[key], label: item[key] }];
+      }
+    });
+
+    return children;
+  }
+
+  const childrens = {
+    authors: itemsChildren('author'),
+    sectors: itemsChildren('sector'),
+  };
+
   const items = [
     {
-      label: <a href="https://www.antgroup.com">1st menu item</a>,
       key: '0',
+      label: 'Author',
+      children: childrens.authors,
     },
     {
-      label: <a href="https://www.aliyun.com">2nd menu item</a>,
       key: '1',
-    },
-    {
-      type: 'divider',
-    },
-    {
-      label: '3rd menu item',
-      key: '3',
+      label: 'Sector',
+      children: childrens.sectors,
     },
   ];
   return (
@@ -33,6 +58,7 @@ export default function Header({ title }) {
         <Input
           placeholder="search"
           className="text-[#A7A7A7] flex flex-1 !w-[222px] rounded"
+          onChange={handleChange}
           prefix={
             <MagnifyingGlassMiniIcon className="size-4 !stroke-[#A7A7A7]" />
           }
@@ -47,11 +73,14 @@ export default function Header({ title }) {
             </Space>
           </Button>
         </Dropdown>
-        <Button type="primary" className="bg-primary rounded-lg">
+        <Button
+          type="primary"
+          className="bg-primary rounded-lg"
+          onClick={() => navigate('/companies/add')}
+        >
           Add Company
         </Button>
       </Flex>
-      <Flex></Flex>
     </Flex>
   );
 }

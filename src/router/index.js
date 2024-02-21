@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/main';
 import { CompaniesPage, DashboardPage, NotFoundPage } from '../pages';
+import AddCompany from '../pages/companies/add';
 
 const PageRouters = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const PageRouters = createBrowserRouter([
       {
         path: 'companies',
         element: <CompaniesPage />,
+      },
+      {
+        path: 'companies/add',
+        element: <AddCompany />,
       },
       {
         path: '*',

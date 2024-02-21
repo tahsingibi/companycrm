@@ -1,13 +1,17 @@
 import { Avatar, Badge, Flex, Table, Typography } from 'antd';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Heading from '../../../../components/heading';
-import datas from '../../../../dummy/companies.json';
 import dateFormatter from '../../../../utils/dateFormatter';
 import imgSrc from '../../../../utils/imgSrc';
+import Header from './header';
 
 const { Text } = Typography;
 
-export default function CompanyTable() {
+export default function CompanyTable({ title }) {
+  const { data, loading } = useSelector(
+    (state) => state.yearlyIncome.yearlyIncome
+  );
   const columns = [
     {
       title: 'Sector',
@@ -62,7 +66,7 @@ export default function CompanyTable() {
         <Badge
           color="#309C88"
           text={<Text className="!text-[#666]">{text}</Text>}
-          className="text-right w-full"
+          className="text-right w-full capitalize"
         />
       ),
     },
@@ -70,7 +74,7 @@ export default function CompanyTable() {
 
   const tableProps = {
     bordered: false,
-    loading: false,
+    loading,
     size: false,
     expandable: false,
     title: false,
@@ -82,5 +86,15 @@ export default function CompanyTable() {
     pagination: false,
     className: 'YearlyTable',
   };
-  return <Table columns={columns} dataSource={datas} {...tableProps} />;
+
+  return (
+    <Table
+      columns={columns}
+      dataSource={data}
+      {...tableProps}
+      title={(items) => {
+        return <Header title={title} data={items} />;
+      }}
+    />
+  );
 }
