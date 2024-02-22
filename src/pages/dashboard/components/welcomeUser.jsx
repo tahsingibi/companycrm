@@ -2,6 +2,7 @@ import { Avatar, Button, Flex } from 'antd';
 import React from 'react';
 import Heading from '../../../components/heading';
 import { ArrowLongRightIcon } from '../../../components/icons';
+import imgSrc from '../../../utils/imgSrc';
 
 export default function WelcomeUser() {
   return (
@@ -12,7 +13,7 @@ export default function WelcomeUser() {
     >
       <Flex vertical gap={12}>
         <Flex align="center" gap={12}>
-          <Avatar size={40} />
+          <Avatar size={40} className="flex-shrink-0" src={imgSrc('author/edward.png')}/>
           <Heading as="h3">Good Morning, Edward</Heading>
         </Flex>
         <p className="text-sm text-[#A7A7A7] !slashed-zero">

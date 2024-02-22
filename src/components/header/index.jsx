@@ -1,10 +1,12 @@
 import { Avatar, Button, Flex, Layout } from 'antd';
 import React from 'react';
 import { BellIcon, GlobeIcon, SquaresIcon } from '../icons';
+import Logo from '../logo';
 
 export default function Header() {
   return (
     <Layout.Header prefixCls="Header">
+      <Logo className="md:hidden" type="icon" />
       <UserMenu />
     </Layout.Header>
   );

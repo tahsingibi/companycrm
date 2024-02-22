@@ -96,14 +96,14 @@ export default function CompaniesChart() {
           Number of Companies
         </Heading>
         <Flex gap={16}>
-          <Flex vertical className="flex-1 ">
+          <Flex vertical className="flex-1">
             <div>
               <Badge
                 color="#80E6FF"
                 text={<span className="text-[#666]">This Month</span>}
               />
             </div>
-            <Heading as="h1" className="!font-normal text-center slashed-zero">
+            <Heading as="h1" className="!font-normal md:text-center slashed-zero">
               80%
             </Heading>
           </Flex>
@@ -113,12 +113,12 @@ export default function CompaniesChart() {
               text={<span className="text-[#666]">Last Month</span>}
               prefixCls="MainLayoutCardBadge"
             />
-            <Heading as="h1" className="!font-normal text-center slashed-zero">
+            <Heading as="h1" className="!font-normal md:text-center slashed-zero">
               72%
             </Heading>
           </Flex>
         </Flex>
-        <Flex padding={0} height={105}>
+        <Flex padding={0} height={105} align="center" justify="center">
           <Chart
             type="bar"
             height={105}

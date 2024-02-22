@@ -55,6 +55,9 @@ export default function Header({ title, data = [] }) {
       children: childrens.sectors,
     },
     {
+      type: 'divider',
+    },
+    {
       key: '2',
       label: 'Reset',
       onClick: () => handleFilter(),
@@ -62,14 +65,14 @@ export default function Header({ title, data = [] }) {
   ];
 
   return (
-    <Flex justify="space-between" align="center">
+    <Flex className="flex flex-col items-starts justify-start gap-2 md:flex-row md:justify-between">
       <Heading as="h5" className="!font-medium !text-current">
         {title}
       </Heading>
-      <Flex gap={8}>
+      <Flex gap={8} className="flex-wrap">
         <Input
           placeholder="search"
-          className="text-[#A7A7A7] flex flex-1 !w-[222px] rounded"
+          className="text-[#A7A7A7] flex  sm:!w-[222px] rounded"
           onChange={handleChange}
           prefix={
             <MagnifyingGlassMiniIcon className="size-4 !stroke-[#A7A7A7]" />

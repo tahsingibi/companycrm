@@ -22,7 +22,7 @@ export default function CompanyTable({ title }) {
         <Flex gap={16} key={record.id} align="center">
           <Avatar
             src={imgSrc(record?.logo)}
-            className=" border border-[#F1F1F1] p-2 !rounded-xl"
+            className=" border border-[#F1F1F1] p-2 !rounded-xl shrink-0"
             shape="square"
             size={64}
           />
@@ -41,8 +41,12 @@ export default function CompanyTable({ title }) {
       dataIndex: 'author',
       key: 'author',
       render: (text, record) => (
-        <Flex gap={16} align="center" className="max-w-44 ">
-          <Avatar src={imgSrc(record?.authorAvatar)} size={32} />
+        <Flex align="center" className="max-w-44 gap-2 md:gap-4">
+          <Avatar
+            src={imgSrc(record?.authorAvatar)}
+            size={32}
+            className="shrink-0"
+          />
           <Text>{text}</Text>
         </Flex>
       ),
