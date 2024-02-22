@@ -20,7 +20,7 @@ html {
 
 @layer components {
     .MainLayout {
-        @apply bg-transparent flex md:max-h-dvh md:overflow-hidden;
+        @apply bg-transparent flex;
 
         &Wrapper,
         .Content,
@@ -30,7 +30,7 @@ html {
         }
 
         &Wrapper {
-            @apply min-h-dvh overflow-auto
+            @apply min-h-dvh
         }
 
         .Content {
