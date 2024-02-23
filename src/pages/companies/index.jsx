@@ -1,6 +1,6 @@
 import React from 'react';
-import CompaniesTable from '../dashboard/components/companies/wrapper';
+import CompaniesTable from '../../components/companies/wrapper';
 
-export function CompaniesPage() {
+export default function CompaniesPage() {
   return <CompaniesTable title="Companies" />;
 }

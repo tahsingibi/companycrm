@@ -2,7 +2,7 @@ import { Empty, Flex, Typography } from 'antd';
 import React from 'react';
 import Heading from '../../components/heading';
 
-export function NotFoundPage() {
+export default function NotFoundPage() {
   return (
     <Empty
       image={Empty.PRESENTED_IMAGE_SIMPLE}

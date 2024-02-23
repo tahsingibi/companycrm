@@ -2,12 +2,12 @@ import { Button, Dropdown, Flex, Input, Space } from 'antd';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Heading from '../../../../components/heading';
+import { actions as YearlyIncomeActions } from '../../store/actions/yearlyIncome';
+import Heading from '../heading';
 import {
-    ChevronDownMiniIcon,
-    MagnifyingGlassMiniIcon,
-} from '../../../../components/icons';
-import { actions as YearlyIncomeActions } from '../../../../store/actions/yearlyIncome';
+  ChevronDownMiniIcon,
+  MagnifyingGlassMiniIcon,
+} from '../icons';
 
 export default function Header({ title, data = [] }) {
   const dispatch = useDispatch();

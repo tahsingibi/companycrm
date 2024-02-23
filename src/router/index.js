@@ -1,8 +1,10 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/main';
-import { CompaniesPage, DashboardPage, NotFoundPage } from '../pages';
+import CompaniesPage from '../pages/companies';
 import AddCompany from '../pages/companies/add';
+import DashboardPage from '../pages/dashboard';
+import NotFoundPage from '../pages/notFound';
 
 const PageRouters = createBrowserRouter([
   {

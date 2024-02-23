@@ -1,9 +1,9 @@
 import { Avatar, Badge, Flex, Table, Typography } from 'antd';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Heading from '../../../../components/heading';
-import dateFormatter from '../../../../utils/dateFormatter';
-import imgSrc from '../../../../utils/imgSrc';
+import dateFormatter from '../../utils/dateFormatter';
+import imgSrc from '../../utils/imgSrc';
+import Heading from '../heading';
 import Header from './header';
 
 const { Text } = Typography;
