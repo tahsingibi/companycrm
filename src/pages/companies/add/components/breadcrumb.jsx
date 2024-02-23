@@ -6,7 +6,7 @@ export default function Breadcrumbs() {
   return (
     <Breadcrumb
       separator={
-        <ChevronRightIcon className="size-4 mt-0.5 stroke-[#A7A7A7]" />
+        <ChevronRightIcon className="size-4 mt-0.5 stroke-neutral-200" />
       }
       className="!flex !items-center "
       items={[

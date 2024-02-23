@@ -19,7 +19,7 @@ export default function Header() {
           Add a Company
         </Heading>
       </Flex>
-      <Text className="text-[#A7A7A7]">
+      <Text className="text-neutral-200">
         You can edit new company information.
       </Text>
     </Flex>

@@ -22,12 +22,12 @@ export default function CompanyTable({ title }) {
         <Flex gap={16} key={record.id} align="center">
           <Avatar
             src={imgSrc(record?.logo)}
-            className=" border border-[#F1F1F1] p-2 !rounded-xl shrink-0"
+            className=" border border-neutral-100 p-2 !rounded-xl shrink-0"
             shape="square"
             size={64}
           />
           <Flex gap={4} vertical>
-            <Text className="text-[#666666] text-xs">{text}</Text>
+            <Text className="text-neutral-300 text-xs">{text}</Text>
             <Heading as="h5" className="!m-0 !font-medium">
               {record.title}
             </Heading>
@@ -57,7 +57,7 @@ export default function CompanyTable({ title }) {
       key: 'date',
       render: (text) => (
         <Flex>
-          <Text className="text-[#666] slashed-zero text-center !w-full">
+          <Text className="text-neutral-300 slashed-zero text-center !w-full">
             {dateFormatter(text)}
           </Text>
         </Flex>
@@ -70,7 +70,7 @@ export default function CompanyTable({ title }) {
       render: (text) => (
         <Badge
           color="#309C88"
-          text={<Text className="!text-[#666]">{text}</Text>}
+          text={<Text className="!text-neutral-300">{text}</Text>}
           className="text-right w-full capitalize"
         />
       ),

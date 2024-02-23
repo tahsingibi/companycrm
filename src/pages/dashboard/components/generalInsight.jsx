@@ -13,7 +13,7 @@ export default function GeneralInsight() {
         <Flex vertical>
           <Statistic
             title={
-              <span className="!text-[#666] !text-opacity-100 !opacity-100">
+              <span className="!text-neutral-300 !text-opacity-100 !opacity-100">
                 Companies
               </span>
             }
@@ -30,10 +30,10 @@ export default function GeneralInsight() {
             className="slashed-zero"
             prefix={<ArrowDownIcon className="w-6 h-6" color="#80E6FF" />}
           />
-          <Divider className="my-4 bg-[#F1F1F1] h-[1px]" />
+          <Divider className="my-4 bg--neutral-100 h-px" />
           <Statistic
             title={
-              <span className="!text-[#666] !text-opacity-100 !opacity-100">
+              <span className="!text-neutral-300 !text-opacity-100 !opacity-100">
                 Proposal
               </span>
             }

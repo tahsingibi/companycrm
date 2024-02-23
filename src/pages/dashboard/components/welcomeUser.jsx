@@ -16,7 +16,7 @@ export default function WelcomeUser() {
           <Avatar size={40} className="flex-shrink-0" src={imgSrc('author/edward.png')}/>
           <Heading as="h3">Good Morning, Edward</Heading>
         </Flex>
-        <p className="text-sm text-[#A7A7A7] !slashed-zero">
+        <p className="text-sm text-neutral-200 !slashed-zero">
           Last login 10 May 2024
         </p>
       </Flex>

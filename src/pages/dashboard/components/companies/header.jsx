@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Heading from '../../../../components/heading';
 import {
-  ChevronDownMiniIcon,
-  MagnifyingGlassMiniIcon,
+    ChevronDownMiniIcon,
+    MagnifyingGlassMiniIcon,
 } from '../../../../components/icons';
 import { actions as YearlyIncomeActions } from '../../../../store/actions/yearlyIncome';
 
@@ -72,10 +72,10 @@ export default function Header({ title, data = [] }) {
       <Flex gap={8} className="flex-wrap">
         <Input
           placeholder="search"
-          className="text-[#A7A7A7] flex  sm:!w-[222px] rounded"
+          className="text-neutral-200 flex  sm:!w-[222px] rounded"
           onChange={handleChange}
           prefix={
-            <MagnifyingGlassMiniIcon className="size-4 !stroke-[#A7A7A7]" />
+            <MagnifyingGlassMiniIcon className="size-4 !stroke-neutral-200" />
           }
         />
         <Dropdown

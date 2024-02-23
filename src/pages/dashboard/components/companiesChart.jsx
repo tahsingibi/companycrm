@@ -100,7 +100,7 @@ export default function CompaniesChart() {
             <div>
               <Badge
                 color="#80E6FF"
-                text={<span className="text-[#666]">This Month</span>}
+                text={<span className="text-neutral-300">This Month</span>}
               />
             </div>
             <Heading as="h1" className="!font-normal md:text-center slashed-zero">
@@ -110,7 +110,7 @@ export default function CompaniesChart() {
           <Flex vertical className="flex-1 ">
             <Badge
               color="#0168FF"
-              text={<span className="text-[#666]">Last Month</span>}
+              text={<span className="text-neutral-300">Last Month</span>}
               prefixCls="MainLayoutCardBadge"
             />
             <Heading as="h1" className="!font-normal md:text-center slashed-zero">
